@@ -1,0 +1,15 @@
+server: 
+    port: 80
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring: 
+    application: 
+        name: crudviewservice
+feign: 
+  hystrix: 
+    enabled: true
+CRUDSERVICE: 
+  ribbon: 
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
